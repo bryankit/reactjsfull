@@ -1,0 +1,19 @@
+<img id="myImage" src="https://miro.medium.com/max/1400/1*9DfMRG9YWb7gL5kmkAe9kg.png">
+
+
+<script>
+    const image = document.getElementById("myImage");
+
+    image.addEventListener("click", function(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        
+        const pointer = document.createElement("div");
+        pointer.style.position = "absolute";
+        pointer.style.left = x + "px";
+        pointer.style.top = y + "px";
+        pointer.style.width = "10px";
+        pointer.style.height = "10px";
+        pointer.style.backgroundColor = "red";
+        document.body.appendChild(pointer);
+    });
